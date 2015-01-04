@@ -20,3 +20,5 @@ Please.beTruthy(123)
 Please.beFalsy(false)
 Please.beFalsy(null)
 ```
+
+Until some kind of [include/require/import](https://github.com/munificent/wren/issues/46) is added, you'll have to paste `please.wren` at the top of your file.
