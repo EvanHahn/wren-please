@@ -10,6 +10,12 @@ class Please {
     }
   }
 
+  static beFalsy(a) {
+    if (a) {
+      fail(a.toString + " isn't falsy")
+    }
+  }
+
   static equal(a, b) {
     if (a != b) {
       fail(a.toString + " doesn't equal " + b.toString)
@@ -24,7 +30,6 @@ class Please {
 
 }
 
-Please.beTruthy(true)
-Please.beTruthy(0)
-Please.beTruthy("hello")
-Please.beTruthy(null)
+Please.beFalsy(false)
+Please.beFalsy(null)
+Please.beFalsy(true)
