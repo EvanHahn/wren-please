@@ -64,3 +64,10 @@ Please.succeed {
   Please.exist("")
 }
 Please.fail { Please.exist(null) }
+
+Please.succeed { Please.beNull(null) }
+Please.fail { Please.beNull(true) }
+Please.fail { Please.beNull(0) }
+Please.fail { Please.beNull(false) }
+Please.fail { Please.beNull([]) }
+Please.fail { Please.beNull("") }
