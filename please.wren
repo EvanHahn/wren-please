@@ -16,6 +16,18 @@ class Please {
     }
   }
 
+  static exist(a) {
+    if (a == null) {
+      fail(a.toString + " is null")
+    }
+  }
+
+  static beNull(a) {
+    if (a != null) {
+      fail(a.toString + " isn't null")
+    }
+  }
+
   static equal(a, b) {
     if (a != b) {
       fail(a.toString + " doesn't equal " + b.toString)
@@ -30,6 +42,5 @@ class Please {
 
 }
 
-Please.beFalsy(false)
-Please.beFalsy(null)
-Please.beFalsy(true)
+Please.beNull(null)
+Please.beNull(true)
