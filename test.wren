@@ -71,3 +71,18 @@ Please.fail { Please.beNull(0) }
 Please.fail { Please.beNull(false) }
 Please.fail { Please.beNull([]) }
 Please.fail { Please.beNull("") }
+
+Please.succeed {
+  Please.equal(1, 1)
+  Please.equal(0, 0)
+  Please.equal(null, null)
+  Please.equal("", "")
+  Please.equal("wow", "wow")
+}
+Please.fail { Please.equal(1, 2) }
+Please.fail { Please.equal(0, 2) }
+Please.fail { Please.equal(0, null) }
+Please.fail { Please.equal(null, 0) }
+Please.fail { Please.equal(0, false) }
+Please.fail { Please.equal(false, 0) }
+Please.fail { Please.equal(false, "false") }
