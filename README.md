@@ -1,7 +1,7 @@
 Please
 ======
 
-Please is a simple assertion library for Wren.
+Please is a simple assertion library for [Wren](https://munificent.github.io/wren/). It works with Wren 0.0.0 as of now.
 
 Basic usage
 -----------
