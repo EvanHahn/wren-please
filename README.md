@@ -3,7 +3,10 @@ Please
 
 Please is a simple assertion library for Wren.
 
-Basic usage:
+Basic usage
+-----------
+
+Until some kind of [include/require/import](https://github.com/munificent/wren/issues/46) is added, you'll have to paste `please.wren` at the top of your file.  Then:
 
 ```dart
 Please.equal(123, 123)
@@ -21,4 +24,11 @@ Please.beFalsy(false)
 Please.beFalsy(null)
 ```
 
-Until some kind of [include/require/import](https://github.com/munificent/wren/issues/46) is added, you'll have to paste `please.wren` at the top of your file.
+Hacking on this
+---------------
+
+To run tests, run this:
+
+```sh
+WREN_PATH=/path/to/wren test.sh
+```

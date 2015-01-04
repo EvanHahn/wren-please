@@ -101,3 +101,5 @@ Please.fail { Please.notEqual(0, 0) }
 Please.fail { Please.notEqual(null, null) }
 Please.fail { Please.notEqual("", "") }
 Please.fail { Please.notEqual("wow", "wow") }
+
+IO.print("All tests passed!")
