@@ -86,3 +86,18 @@ Please.fail { Please.equal(null, 0) }
 Please.fail { Please.equal(0, false) }
 Please.fail { Please.equal(false, 0) }
 Please.fail { Please.equal(false, "false") }
+
+Please.succeed {
+  Please.notEqual(1, 2)
+  Please.notEqual(0, 2)
+  Please.notEqual(0, null)
+  Please.notEqual(null, 0)
+  Please.notEqual(0, false)
+  Please.notEqual(false, 0)
+  Please.notEqual(false, "false")
+}
+Please.fail { Please.notEqual(1, 1) }
+Please.fail { Please.notEqual(0, 0) }
+Please.fail { Please.notEqual(null, null) }
+Please.fail { Please.notEqual("", "") }
+Please.fail { Please.notEqual("wow", "wow") }
