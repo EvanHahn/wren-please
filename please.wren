@@ -1,18 +1,18 @@
 class Please {
 
-  static error(message) {
+  static fail(message) {
     Fiber.abort("Assertion error: " + message)
   }
 
   static equal(a, b) {
     if (a != b) {
-      error(a.toString + " doesn't equal " + b.toString)
+      fail(a.toString + " doesn't equal " + b.toString)
     }
   }
 
   static notEqual(a, b) {
     if (a == b) {
-      error(a.toString + " equals " + b.toString)
+      fail(a.toString + " equals " + b.toString)
     }
   }
 
