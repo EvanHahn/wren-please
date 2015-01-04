@@ -55,3 +55,12 @@ Please.fail { Please.beFalsy(true) }
 Please.fail { Please.beFalsy(0) }
 Please.fail { Please.beFalsy("") }
 Please.fail { Please.beFalsy([]) }
+
+Please.succeed {
+  Please.exist(true)
+  Please.exist(0)
+  Please.exist(false)
+  Please.exist([])
+  Please.exist("")
+}
+Please.fail { Please.exist(null) }
