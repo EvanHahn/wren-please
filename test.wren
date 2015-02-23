@@ -104,4 +104,10 @@ Please.fail { Please.notEqual(null, null) }
 Please.fail { Please.notEqual("", "") }
 Please.fail { Please.notEqual("wow", "wow") }
 
+Please.succeed { Please.beTrue(true) }
+Please.fail { Please.beTrue(false) }
+
+Please.succeed { Please.beFalse(false) }
+Please.fail { Please.beFalse(true) }
+
 IO.print("All tests passed!")

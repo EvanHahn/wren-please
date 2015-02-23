@@ -28,6 +28,18 @@ class Please {
     }
   }
 
+  static beTrue(a) {
+    if (a != true) {
+      errorMessage(a.toString + " isn't true")
+    }
+  }
+
+  static beFalse(a) {
+    if (a != false) {
+      errorMessage(a.toString + " isn't false")
+    }
+  }
+
   static equal(a, b) {
     if (a != b) {
       errorMessage(a.toString + " doesn't equal " + b.toString)
