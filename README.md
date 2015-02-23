@@ -6,9 +6,9 @@ Please is a simple assertion library for [Wren](https://munificent.github.io/wre
 Basic usage
 -----------
 
-Until some kind of [include/require/import](https://github.com/munificent/wren/issues/46) is added, you'll have to paste `please.wren` at the top of your file.  Then:
-
 ```dart
+import "please" for Please
+
 Please.equal(123, 123)
 Please.notEqual(456, 789)
 
@@ -30,5 +30,5 @@ Hacking on this
 To run tests, run this:
 
 ```sh
-WREN_PATH=/path/to/wren test.sh
+wren test.wren
 ```

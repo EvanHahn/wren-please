@@ -1,3 +1,5 @@
+import "please" for Please
+
 // Please.fail and Please.succeed need to be tested "raw",
 // but once we have those two, we can test the rest. The
 // following are tests of fail and succeed:
