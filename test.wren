@@ -4,10 +4,10 @@ import "please" for Please
 // but once we have those two, we can test the rest. The
 // following are tests of fail and succeed:
 
-var shouldError = new Fn {|block|
-  var fiber = new Fiber(block)
-  fiber.try
-  if (fiber.error) {} else {
+var shouldError = Fn.new {|block|
+  var fiber = Fiber.new(block)
+  fiber.try()
+  if (fiber.error == null) {
     Fiber.abort("Block should've thrown an error")
   }
 }
@@ -20,7 +20,7 @@ Please.succeed { [] }
 Please.succeed {
   return false
 }
-Please.succeed(new Fn { 123 })
+Please.succeed(Fn.new { 123 })
 
 shouldError.call { Please.succeed { 123.badMethod } }
 shouldError.call { Please.succeed { Fiber.abort("crap") } }
@@ -36,7 +36,7 @@ shouldError.call { Please.fail { [] } }
 shouldError.call { Please.fail {
   return false
 } }
-shouldError.call { Please.fail(new Fn { 123 }) }
+shouldError.call { Please.fail(Fn.new { 123 }) }
 
 // Now we can test the rest.
 

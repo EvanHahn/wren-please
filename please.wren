@@ -53,20 +53,18 @@ class Please {
   }
 
   static fail(a) {
-    var fiber = new Fiber(a)
-    fiber.try
-    var error = fiber.error
-    if (error == null) {
+    var fiber = Fiber.new(a)
+    fiber.try()
+    if (fiber.error == null) {
       errorMessage(a.toString + " doesn't fail")
     }
   }
 
   static succeed(a) {
-    var fiber = new Fiber(a)
-    fiber.try
-    var error = fiber.error
-    if (error != null) {
-      errorMessage(a.toString + " aborts with error " + error.toString)
+    var fiber = Fiber.new(a)
+    fiber.try()
+    if (fiber.error != null) {
+      errorMessage(a.toString + " aborts with error " + fiber.error)
     }
   }
 
