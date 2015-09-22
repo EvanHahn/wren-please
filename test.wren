@@ -110,4 +110,4 @@ Please.fail { Please.beTrue(false) }
 Please.succeed { Please.beFalse(false) }
 Please.fail { Please.beFalse(true) }
 
-IO.print("All tests passed!")
+System.print("All tests passed!")
