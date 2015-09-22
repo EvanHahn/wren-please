@@ -104,6 +104,54 @@ Please.fail { Please.notEqual(null, null) }
 Please.fail { Please.notEqual("", "") }
 Please.fail { Please.notEqual("wow", "wow") }
 
+Please.succeed {
+  Please.deepEqual(1, 1)
+  Please.deepEqual("wow", "wow")
+
+  Please.deepEqual([], [])
+  Please.deepEqual([1], [1])
+  Please.deepEqual([1, 2, 3], [1, 2, 3])
+  Please.deepEqual([1, [2, 3]], [1, [2, 3]])
+
+  Please.deepEqual({
+    "what": {
+      "the": ["heck"]
+    }
+  }, {
+    "what": {
+      "the": ["heck"]
+    }
+  })
+}
+
+Please.fail { Please.deepEqual(true, false) }
+Please.fail { Please.deepEqual([], {}) }
+Please.fail { Please.deepEqual([], [1, 2]) }
+Please.fail { Please.deepEqual([1, 2, 3], [1, [2, 3]]) }
+Please.fail {
+  Please.deepEqual({
+    "what": {
+      "the": ["heck"]
+    }
+  }, {
+    "what": {
+      "the": ["heck"],
+      "star": "fox"
+    }
+  })
+}
+Please.fail {
+  Please.deepEqual({
+    "what": {
+      "the": ["heck"]
+    }
+  }, {
+    "what": {
+      "the": ["frick"],
+    }
+  })
+}
+
 Please.succeed { Please.beTrue(true) }
 Please.fail { Please.beTrue(false) }
 

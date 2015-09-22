@@ -12,6 +12,8 @@ import "please" for Please
 Please.equal(123, 123)
 Please.notEqual(456, 789)
 
+Please.deepEqual([1, [2, 3]], [1, [2, 3]])
+
 Please.succeed { "Hello" + "nation" }
 Please.fail { 123.badMethod }
 
